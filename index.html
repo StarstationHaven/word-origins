@@ -1,13 +1,259 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>English Words That Originate From Other Languages</title>
 	
-	 <link rel="stylesheet" href="style.css">
-	
+	<style>
+		body{
+			font-family: Roboto, sans-serif;
+			background-color:#D6D9FF;
+			margin: 0;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		
+		.main-wrapper {
+			max-width: 1240px;
+			margin: 0 auto;
+		}
+		
+		#footer{
+			height:30px;
+			vertical-align:middle;
+			text-align:right;
+			clear:both;
+			padding-right:3px;
+			background-color:#317082;
+			margin-top:2px;
+			width:100%;
+			max-width: 790px;
+		}
+		#footer form{
+			margin:0px;
+			margin-top:2px;
+		}
+		#dhtmlgoodies_dragDropContainer{
+			width:100%;
+			max-width: 1240px;
+			min-height:770px;
+			border:1px solid #317082;
+			background-image: url(3362848.jpeg);
+			background-size: cover;
+			background-position: center;
+			-moz-user-select:none;
+			box-sizing: border-box;
+		}
+		#dhtmlgoodies_dragDropContainer ul{
+			margin-top:0px;
+			margin-left:0px;
+			margin-bottom:0px;
+			padding:2px;
+		}
+		
+		#dhtmlgoodies_dragDropContainer li,#dragContent li,li#indicateDestination{
+			list-style-type:none;
+			height:15px;
+			background-color:floralwhite;
+			border:2px solid #000;
+			padding:2px;
+			margin-bottom:2px;
+			cursor:pointer;
+			font-size:13px;
+			line-height:15px;
+		}
+		li#indicateDestination{
+			border:1px dotted #600;	
+			background-color:#FFF;
+		}
+			
+		#dhtmlgoodies_dragDropContainer ul li.correctAnswer{
+			background-color:green;
+			color:#FFF;
+		}
+		#dhtmlgoodies_dragDropContainer ul li.wrongAnswer{
+			background-color:red;
+			color:#FFF;
+		}
+		
+		/* RESPONSIVE LAYOUT */
+		.game-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+		
+		div#dhtmlgoodies_listOfItems{
+			flex: 0 0 auto;
+			width: 180px;
+			min-width: 160px;
+			padding-left:10px;
+			padding-right:20px;
+		}
+		
+		#dhtmlgoodies_listOfItems ul{
+			height:475px;	
+		}
+			
+		div#dhtmlgoodies_listOfItems div{
+			border:2px solid #000;		
+		}
+		div#dhtmlgoodies_listOfItems div ul{
+			margin-left:0px;
+		}
+		#dhtmlgoodies_listOfItems div p{
+			margin:0px;	
+			font-weight:bold;
+			padding-left:0px;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			background-color:#F78764;	
+			color:#FFF;
+			margin-bottom:5px;
+		}
+		
+		#dhtmlgoodies_dragDropContainer .mouseover{
+			background-color:#E2EBED;
+			border:1px solid #317082;
+		}
+		
+		div#dhtmlgoodies_mainContainer{
+			flex: 1;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 10px;
+			padding: 0 10px;
+		}
+		
+		#dhtmlgoodies_mainContainer div{
+			height:228px;
+			border:1px solid #000;
+			width: 100%;
+			min-width: 300px;
+		}
+		
+		#dhtmlgoodies_mainContainer div ul{
+			margin-left:0px;
+		}
+		
+		#dhtmlgoodies_mainContainer div p{
+			margin:0px;
+			padding:0px;
+			padding-left:0px;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			font-weight:bold;
+			background-color:#DA4167;	
+			color:#FFF;	
+			margin-bottom:5px;
+		}
+		
+		#dhtmlgoodies_mainContainer ul{
+			width: calc(100% - 4px);
+			height:80px;	
+			border:0px;	
+			margin-bottom:0px;
+			margin-top: 10px;
+			overflow:hidden;
+		}
+		
+		#dragContent{
+			position:absolute;
+			width:150px;
+			height:15px;
+			display:none;
+			margin:0px;
+			padding:0px;
+			z-index: 2000;
+		}
+		#dragDropIndicator{
+			position:absolute;
+			width:7px;
+			height:10px;
+			display:none;
+			z-index:1000;
+			margin:0px;
+			padding:0px;
+		}
+		.style1 {
+			color: #FF0000;
+		}
+		
+		/* MOBILE RESPONSIVE */
+		@media screen and (max-width: 768px) {
+			body {
+				padding: 5px;
+			}
+			
+			.game-container {
+				flex-direction: column;
+			}
+			
+			div#dhtmlgoodies_listOfItems {
+				width: 100%;
+				order: 1;
+				padding-left: 0;
+				padding-right: 0;
+			}
+			
+			#dhtmlgoodies_listOfItems ul {
+				height: auto;
+				min-height: 200px;
+			}
+			
+			div#dhtmlgoodies_mainContainer {
+				order: 2;
+				padding: 0;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			}
+			
+			#dhtmlgoodies_mainContainer div {
+				min-width: 250px;
+				height: auto;
+				min-height: 160px;
+			}
+			
+			#dhtmlgoodies_mainContainer ul {
+				height: 60px;
+				min-height: 60px;
+			}
+			
+			#dhtmlgoodies_dragDropContainer {
+				min-height: auto;
+			}
+			
+			h1 {
+				font-size: 1.5rem;
+				text-align: center;
+			}
+			
+			p {
+				text-align: center;
+				padding: 0 10px;
+			}
+		}
+		
+		@media screen and (max-width: 480px) {
+			div#dhtmlgoodies_mainContainer {
+				grid-template-columns: 1fr;
+			}
+			
+			#dhtmlgoodies_mainContainer div {
+				min-width: 100%;
+			}
+			
+			h1 {
+				font-size: 1.2rem;
+			}
+			
+			#dhtmlgoodies_dragDropContainer li,#dragContent li,li#indicateDestination {
+				font-size: 11px;
+				height: 12px;
+				line-height: 12px;
+			}
+		}
+	</style>
 	
 	<script type="text/javascript">
 	
@@ -26,7 +272,6 @@
 	
 											
 	var initShuffleItems = true;	// Shuffle items before staring
-
 	var indicateDestionationByUseOfArrow = true;	// Display arrow to indicate where object will be dropped(false = use rectangle)
 	
 	
@@ -150,7 +395,6 @@
 			tmpOffsetX = arrow_offsetX_firefox;
 			tmpOffsetY = arrow_offsetY_firefox;
 		}
-
 		for(var no=0;no<ulPositionArray.length;no++){
 			var ul_leftPos = ulPositionArray[no]['left'];	
 			var ul_topPos = ulPositionArray[no]['top'];	
@@ -311,6 +555,17 @@
 		
 	}
 	
+	// Add function to recalculate positions on resize
+	function recalculatePositions() {
+		var ulArray = dragDropTopContainer.getElementsByTagName('UL');
+		for(var no=0;no<ulArray.length;no++){
+			ulPositionArray[no]['left'] = getLeftPos(ulArray[no]);	
+			ulPositionArray[no]['top'] = getTopPos(ulArray[no]);	
+			ulPositionArray[no]['width'] = ulArray[no].offsetWidth;
+			ulPositionArray[no]['height'] = ulArray[no].clientHeight;
+		}
+	}
+	
 	function initDragDropScript()
 	{
 		dragContentObj = document.getElementById('dragContent');
@@ -366,70 +621,77 @@
 			indicateDestinationBox.id = 'indicateDestination';
 			indicateDestinationBox.style.display='none';
 			document.body.appendChild(indicateDestinationBox);
-		}		
+		}
+		
+		// Add resize event listener to recalculate positions
+		window.addEventListener('resize', function() {
+			setTimeout(recalculatePositions, 100);
+		});
 		
 	}
 	
 	window.onload = initDragDropScript;
 	</script>
-</head><body><center>
-<h1 align="center">English Words That Originate From Other Languages</h1>
-<p>Drag and drop "Words" to their language of origin. When the word is placed in the correct box it will turn green. When placed in the incorrect box it will turn red. Each box can contain only <span class="style1">3 items</span>.</p>
-<div id="dhtmlgoodies_dragDropContainer">
-	<div id="topBar">
-	<div style="padding-bottom: 5px; width: 728px; height: 1px;">
-
-</script>
-	</div>
-			
+</head>
+<body>
+<div class="main-wrapper">
+	<center>
+	<h1 align="center">English Words That Originate From Other Languages</h1>
+	<p>Drag and drop "Words" to their language of origin. When the word is placed in the correct box it will turn green. When placed in the incorrect box it will turn red. Each box can contain only <span class="style1">3 items</span>.</p>
+	</center>
+	
+	<div id="dhtmlgoodies_dragDropContainer">
+		<div id="topBar">
+		<div style="padding-bottom: 5px; width: 100%; height: 1px;">
 		</div>
-	<div id="dhtmlgoodies_listOfItems">
-		<div class="">
-			<p>Words</p>		
-		<ul id="allItems">
-			
-			
-		<li id="node7" groupid="box1">Karaoke</li><li class="" id="node15" groupid="box1">Karate</li><li class="" id="node19" groupid="box1">Tsunami</li>
-		<li id="node9" groupid="box2">Cliché</li><li class="" id="node10" groupid="box2">Optimism</li><li class="" id="node8" groupid="box2">Identity</li><li id="node3" groupid="box3">Guerrilla</li><li id="node2" groupid="box3">Cocoa</li><li id="node16" groupid="box3">Savvy</li>
-		<li id="node12" groupid="box5">Cynicsm</li><li class="" id="node14" groupid="box5">Galaxy</li><li class="" id="node15" groupid="box5">Schizophrenia</li><li id="node1" groupid="box4">Jenga</li><li id="node2" groupid="box4">Jumbo</li><li id="node18" groupid="box4">Safari</li>
-        <li class="" id="node25" groupid="box6">Avatar</li><li id="node21" groupid="box6">Guru</li><li id="node24" groupid="box6">Pyjamas</li></ul>
-		</div>
-	</div>	
-    
-    
-	<div id="dhtmlgoodies_mainContainer">
-		<!-- ONE <UL> for each "room" -->
-		<div class="">
-			<p>Japanese</p>
-			<ul style="height: 72px;" id="box1">
-			</ul>
-		</div>
-		<div class="">		
-			<p>French</p>
-			<ul style="height: 72px;" id="box2"></ul>
-		</div>
-		<div>
-		  <p >Spanish</p>
-			<ul style="height: 72px;" id="box3"></ul>
-		</div>
-        <div class="">		
-			<p>Swahili</p>
-			<ul style="height: 72px;" id="box4"></ul>
-		</div>
-		<div class="">
-		  <p>Greek</p>
-			<ul style="height: 72px;" id="box5"></ul>
-		</div>
-        <div class="">
-		  <p>Hindi</p>
-			<ul style="height: 72px;" id="box6"></ul>
 		</div>
 		
+		<div class="game-container">
+			<div id="dhtmlgoodies_listOfItems">
+				<div class="">
+					<p>Words</p>		
+				<ul id="allItems">
+					<li id="node7" groupid="box1">Karaoke</li><li class="" id="node15" groupid="box1">Karate</li><li class="" id="node19" groupid="box1">Tsunami</li>
+					<li id="node9" groupid="box2">Cliché</li><li class="" id="node10" groupid="box2">Optimism</li><li class="" id="node8" groupid="box2">Identity</li><li id="node3" groupid="box3">Guerrilla</li><li id="node2" groupid="box3">Cocoa</li><li id="node16" groupid="box3">Savvy</li>
+					<li id="node12" groupid="box5">Cynicsm</li><li class="" id="node14" groupid="box5">Galaxy</li><li class="" id="node13" groupid="box5">Schizophrenia</li><li id="node1" groupid="box4">Jenga</li><li id="node17" groupid="box4">Jumbo</li><li id="node18" groupid="box4">Safari</li>
+					<li class="" id="node25" groupid="box6">Avatar</li><li id="node21" groupid="box6">Guru</li><li id="node24" groupid="box6">Pyjamas</li>
+				</ul>
+				</div>
+			</div>	
+			
+			<div id="dhtmlgoodies_mainContainer">
+				<!-- ONE <UL> for each "room" -->
+				<div class="">
+					<p>Japanese</p>
+					<ul id="box1">
+					</ul>
+				</div>
+				<div class="">		
+					<p>French</p>
+					<ul id="box2"></ul>
+				</div>
+				<div>
+				  <p>Spanish</p>
+					<ul id="box3"></ul>
+				</div>
+				<div class="">		
+					<p>Swahili</p>
+					<ul id="box4"></ul>
+				</div>
+				<div class="">
+				  <p>Greek</p>
+					<ul id="box5"></ul>
+				</div>
+				<div class="">
+				  <p>Hindi</p>
+					<ul id="box6"></ul>
+				</div>
+			</div>
+		</div>
 	</div>
-    </center>
+	<ul id="dragContent"></ul>
+	<div id="dragDropIndicator"><img src="insert.gif"></div>
+	<div id="saveContent"></div>
 </div>
-<ul style="left: 110px; top: 329px; display: block;" id="dragContent"></ul>
-<div style="display: none; left: 24px; top: 333px;" id="dragDropIndicator"><img src="insert.gif"></div>
-<div id="saveContent"></div>
-
-</span></body></html>
+</body>
+</html>
